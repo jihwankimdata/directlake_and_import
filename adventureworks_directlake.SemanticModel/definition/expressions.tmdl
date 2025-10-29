@@ -1,0 +1,9 @@
+expression 'DirectLake - lakehouse_shortcut' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/0ec22b1b-b1a6-40cd-be24-0d3d9f5fe173/1d8c98b3-52f8-41f7-a7d9-ca5c3abf293e", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: 6d7eda12-1b07-4637-8f72-14130d4bf9dd
+
+	annotation PBI_IncludeFutureArtifacts = False
+

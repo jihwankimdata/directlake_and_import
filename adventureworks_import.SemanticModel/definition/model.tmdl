@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["dimdate","dimproduct","dimsalesterritory","factinternetsales","dimcustomer","Measure"]
+
+ref table dimdate
+ref table dimproduct
+ref table dimsalesterritory
+ref table factinternetsales
+ref table dimcustomer
+ref table prm_category
+ref table Measure
+
+ref cultureInfo en-US
+
