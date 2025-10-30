@@ -1,0 +1,51 @@
+table prm_category
+	lineageTag: f4055d50-4f68-46e4-8226-2fde4d02095c
+
+	column prm_category
+		lineageTag: fbeccb21-7e73-44b5-8649-a3131a44818f
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'prm_category Order'
+
+		relatedColumnDetails
+			groupByColumn: 'prm_category Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'prm_category Fields'
+		isHidden
+		lineageTag: cc8ac9ed-442d-4cf4-871d-60349751ca3b
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'prm_category Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'prm_category Order'
+		isHidden
+		formatString: 0
+		lineageTag: 49fe9496-22d5-4a78-9088-80af9a44eabc
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition prm_category = calculated
+		mode: import
+		source =
+				{
+				    ("Gender", NAMEOF('dimcustomer'[Gender]), 0),
+				    ("CalendarYear", NAMEOF('dimdate'[CalendarYear]), 1),
+				    ("Color", NAMEOF('dimproduct'[Color]), 2),
+				    ("EnglishProductName", NAMEOF('dimproduct'[EnglishProductName]), 3),
+				    ("SalesTerritoryCountry", NAMEOF('dimsalesterritory'[SalesTerritoryCountry]), 4)
+				}
+
+	annotation PBI_Id = dd43d8bd981d400686bf676b4cfb054e
+
