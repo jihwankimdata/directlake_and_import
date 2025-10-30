@@ -1,5 +1,6 @@
 table dimdate
 	lineageTag: 42d0f417-ffba-424d-907b-c2a73dde0a71
+	dataCategory: Time
 
 	column DateKey
 		dataType: int64
@@ -12,6 +13,7 @@ table dimdate
 
 	column FullDateAlternateKey
 		dataType: dateTime
+		isKey
 		formatString: Long Date
 		lineageTag: e9783189-47d8-4681-b752-1f900f62a078
 		summarizeBy: none

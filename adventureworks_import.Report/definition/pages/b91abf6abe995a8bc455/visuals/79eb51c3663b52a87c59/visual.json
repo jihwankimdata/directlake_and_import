@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "79eb51c3663b52a87c59",
   "position": {
-    "x": 33.920498830865156,
-    "y": 297.30319563522988,
+    "x": 328.23070927513635,
+    "y": 64.848012470771621,
     "z": 1,
-    "height": 400.06235385814495,
-    "width": 881.932969602494,
+    "height": 185.56508183943879,
+    "width": 312.26812159002333,
     "tabOrder": 1
   },
   "visual": {
@@ -43,6 +43,20 @@
               },
               "queryRef": "Measure.sales:",
               "nativeQueryRef": "sales:"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Measure"
+                    }
+                  },
+                  "Property": "sales SPLY:"
+                }
+              },
+              "queryRef": "Measure.sales SPLY:",
+              "nativeQueryRef": "sales SPLY:"
             }
           ],
           "fieldParameters": [
@@ -93,6 +107,20 @@
               }
             },
             "Property": "sales:"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2066cb9df9838267a4b5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Measure"
+              }
+            },
+            "Property": "sales SPLY:"
           }
         },
         "type": "Advanced"

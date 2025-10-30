@@ -6,6 +6,10 @@ table Measure
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'sales SPLY:' = _fn_SamePeriodLastYear([sales:], dimdate[FullDateAlternateKey])
+		formatString: #,0.00
+		lineageTag: 4e3cfefb-7e12-44ea-b7dc-c690ec3ba67f
+
 	partition Measure = m
 		mode: import
 		source =

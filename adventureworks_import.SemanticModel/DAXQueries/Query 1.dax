@@ -1,0 +1,8 @@
+DEFINE
+
+	FUNCTION
+		/// It calculates the same period last year figures of the measure
+		_fn_SamePeriodLastYear = (_measure: int64 expr, _datecolumn: anyref) => CALCULATE(
+			_measure,
+			SAMEPERIODLASTYEAR(_datecolumn)
+		)
