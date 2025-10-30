@@ -1,0 +1,32 @@
+relationship AutoDetected_d2b20675-3e31-473e-9f9a-fcb11f050f3a
+	fromColumn: factinternetsales_import.ProductKey
+	toColumn: dimproduct.ProductKey
+
+relationship AutoDetected_f1e72363-2a34-4d60-82d5-04b5f82ac268
+	fromColumn: factinternetsales_import.SalesTerritoryKey
+	toColumn: dimsalesterritory.SalesTerritoryKey
+
+relationship AutoDetected_28fab9de-380a-4c2d-ba66-60cb7770543d
+	fromColumn: factinternetsales_import.CustomerKey
+	toColumn: dimcustomer.CustomerKey
+
+relationship e8f2d1d9-fe27-2894-8920-2354ebe32a54
+	fromColumn: factinternetsales_import.OrderDateKey
+	toColumn: dimdate.DateKey
+
+relationship de12c4de-5381-595b-7e9b-a6bc65f5d2e7
+	fromColumn: factinternetsales.SalesTerritoryKey
+	toColumn: dimsalesterritory.SalesTerritoryKey
+
+relationship ccc37ed2-2c10-9ab5-a2a4-7a94a189954c
+	fromColumn: factinternetsales.OrderDateKey
+	toColumn: dimdate.DateKey
+
+relationship b3920577-2aed-c620-5668-fe7f88aa515d
+	fromColumn: factinternetsales.CustomerKey
+	toColumn: dimcustomer.CustomerKey
+
+relationship da772872-827c-0a20-f443-18328c1979c1
+	fromColumn: factinternetsales.ProductKey
+	toColumn: dimproduct.ProductKey
+

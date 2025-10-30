@@ -6,11 +6,20 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["DirectLake - lakehouse_shortcut"]
+annotation PBI_QueryOrder = ["dimdate","dimproduct","dimsalesterritory","factinternetsales_import","dimcustomer","Measure","DirectLake - lakehouse_shortcut"]
 
-annotation __PBI_TimeIntelligenceEnabled = 1
+annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_ProTooling = ["RemoteModeling","DirectLakeOnOneLakeCreatedInDesktop"]
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop","RemoteModeling","DirectLakeOnOneLakeMultisource"]
 
+ref table dimdate
+ref table dimproduct
+ref table dimsalesterritory
+ref table factinternetsales_import
+ref table dimcustomer
+ref table prm_category
+ref table Measure
 ref table factinternetsales
+
+ref cultureInfo en-US
 
