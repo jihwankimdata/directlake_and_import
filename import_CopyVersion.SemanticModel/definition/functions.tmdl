@@ -1,7 +1,0 @@
-function _fn_SamePeriodLastYear =
-		(_measure: int64 expr, _datecolumn: anyref) => CALCULATE(
-					_measure,
-					SAMEPERIODLASTYEAR(_datecolumn)
-				)
-	lineageTag: d0b4b437-583a-4445-9b53-5e0de08374ee
-
